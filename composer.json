@@ -1,0 +1,64 @@
+{
+    "name": "outhebox/larapress",
+    "description": "A Laravel publishing platform",
+    "keywords": [
+        "outhebox",
+        "larapress"
+    ],
+    "homepage": "https://github.com/MohmmedAshraf/larapress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Ashraf",
+            "email": "cupo.ashraf@gmail.com",
+            "homepage": "https://mohamed-ashraf.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Outhebox\\LaraPress\\": "src",
+            "Outhebox\\LaraPress\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Outhebox\\LaraPress\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Outhebox\\LaraPress\\LaraPressServiceProvider"
+            ],
+            "aliases": {
+                "LaraPress": "Outhebox\\LaraPress\\LaraPressFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/MohmmedAshraf"
+        }
+    ]
+}
